@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'sfpro';
+    src: url('/public/fonts/sf-pro/SFPRODISPLAYREGULAR.OTF') format('opentype');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
