@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Job;
 
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (){
+   return view('apple');
 });
+
+
 Route::get('/jobs', function () {
     return view('jobs', ['jobs' => Job::all()]);
 });
@@ -19,6 +21,7 @@ Route::get('/jobs/{id}', function ($id) {
 
 Route::view('/contact', 'contact');
 Route::view('/about', 'jobs');
+
 // simple crud
 Route::get('/product', [ProductController::class, 'index'])->name('product.index');
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');

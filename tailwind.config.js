@@ -14,6 +14,12 @@ export default {
             fontFamily: {
                 'sf-pro': ['sfpro', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'red': '#FB0808',
+            },
+            backgroundColor: {
+               'bg-button': '#3D3D3D'
+            },
         },
     },
     plugins: [],

@@ -3,7 +3,7 @@
         <div class="flex-1">
             <span class="dark:text-[#FFFCFC] " id="hora"></span>
         </div>
-        <div class="w-52 h-6 rounded-b-full dark:bg-[#020202] absolute top-0 translate-x-1/2 right-1/2">
+        <div class="w-36 sm:w-52 h-6 rounded-b-full dark:bg-[#020202] absolute top-0 translate-x-1/2 right-1/2">
 
         </div>
         <div class="flex gap-1 flex-1 justify-end">
