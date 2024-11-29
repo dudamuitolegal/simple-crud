@@ -2,14 +2,16 @@
 
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SongController;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 use App\Models\Job;
 
 
-Route::get('/', function (){
-   return view('apple');
-});
+Route::get('/', [SongController::class, 'index'])->name('song.index');
+
+
+
 
 
 Route::get('/jobs', function () {
