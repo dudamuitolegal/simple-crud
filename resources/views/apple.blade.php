@@ -50,18 +50,20 @@
             </div>
         </div>
 
-        @for ($i = 0; $i <= 10; $i++)
+        @foreach ($songs as $song)
             <div class="flex gap-3">
                 <img class="rounded" src="https://placehold.co/48x48">
                 <div class="flex-1">
-                    <h2 class="text-white">Name</h2>
-                    <span class="text-[#999999]">Artist</span>
-                    @if($i < 10)
+                    <h2 class="text-white">{{$song['song_name']}}</h2>
+                    <span class="text-[#999999]">{{$song['artist_name']}}</span>
+                    @if($loop->last)
                     <div class="border-t-[1px] border-[#999999]"></div>
                     @endif
                 </div>
             </div>
-        @endfor
+        @endforeach
+
+
 
     </main>
 </div>

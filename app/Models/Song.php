@@ -11,6 +11,11 @@ class Song extends Model
 
     protected $fillable = [
         'song_name',
-        'audio_path',
+        'artist_name',
     ];
+
+    public function path()
+    {
+        return $this->hasMany(Path::class);
+    }
 }

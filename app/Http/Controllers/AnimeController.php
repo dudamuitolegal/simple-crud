@@ -62,4 +62,15 @@ class AnimeController extends Controller
 
         return view('anime.search', compact('animes'));
     }
+
+
+    public function uploadForm(){
+        return view('anime.upload');
+
+    }
+    public function uploadArchive(Request $request){
+
+        $file = $request->file('feng')->store('archives', 'public');
+
+    }
 }

@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('paths', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('song_id')
+            ->constrained('songs')
+            ->onDelete('cascade');
             $table->string('path_image')->nullable();
             $table->string('path_song')->nullable();
+            $table->timestamps();
         });
     }
 

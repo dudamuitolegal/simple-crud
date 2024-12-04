@@ -8,10 +8,14 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Job;
 
 
+Route::get('/songs/create', [SongController::class, 'create'])->name('songs.create');
+Route::post('/songs', [SongController::class, 'store'])->name('songs.store');
+
+
+
+
+
 Route::get('/', [SongController::class, 'index'])->name('song.index');
-
-
-
 
 
 Route::get('/jobs', function () {
@@ -42,3 +46,9 @@ Route::get('/anime/{anime}/edit', [AnimeController::class, 'edit'])->name('anime
 Route::put('/anime/{anime}/update', [AnimeController::class, 'update'])->name('anime.update');
 Route::delete('/anime/{anime}/destroy', [AnimeController::class, 'destroy'])->name('anime.destroy');
 Route::get('/anime/search', [AnimeController::class, 'search'])->name('anime.search');
+
+
+
+
+Route::get('upload', [AnimeController::class, 'uploadForm'])->name('upload.upload');
+Route::post('upload', [AnimeController::class, 'uploadArchive'])->name('upload.archive');
